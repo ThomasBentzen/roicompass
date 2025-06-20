@@ -10,6 +10,7 @@
     
     * {
       font-family: Arial, monospace;
+      box-sizing: border-box;
     }
     
     body {
@@ -81,6 +82,90 @@
       opacity: 0.6;
       margin-top: 10px;
     }
+
+    /* Form Styles */
+    .signup-form {
+      background: rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(0, 153, 255, 0.3);
+      border-radius: 12px;
+      padding: 30px;
+      margin: 40px 0;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 153, 255, 0.1);
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .form-title {
+      color: rgba(0, 153, 255, 0.9);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 1px rgba(0, 153, 255, 0.3);
+      letter-spacing: 0.5px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: rgba(0, 153, 255, 0.6);
+      box-shadow: 0 0 0 2px rgba(0, 153, 255, 0.1);
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .form-group input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, rgba(0, 153, 255, 0.8), rgba(0, 123, 204, 0.8));
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background: linear-gradient(135deg, rgba(0, 153, 255, 1), rgba(0, 123, 204, 1));
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
+    }
+
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+
     .footer {
       font-size: 0.9rem;
       opacity: 0.5;
@@ -88,6 +173,26 @@
       bottom: 20px;
       width: 100%;
       text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .tagline {
+        font-size: 1rem;
+      }
+      
+      .signup-form {
+        padding: 20px;
+        margin: 30px 0;
+      }
     }
   </style>
 </head>
@@ -98,41 +203,53 @@
     <div class="tagline">Compass being calibrated</div>
     
     <div class="space"></div>
-    <div class="space"></div>
-    <div class="space"></div>
     
     <div class="quote">
       "Festina Lente" — Make Haste Slowly
       <div class="quote-author">— Caesar Augustus, First Roman Emperor</div>
     </div>
+
+    <form class="signup-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dd200000Dluwv" method="POST">
+      
+      <input type="hidden" name="oid" value="00Dd200000Dluwv">
+      <input type="hidden" name="retURL" value="http://www.roicompass.com">
+
+      <div class="form-title">Get Early Access</div>
+
+      <div class="form-group">
+        <label for="first_name">First Name</label>
+        <input id="first_name" maxlength="40" name="first_name" type="text" placeholder="Enter your first name" />
+      </div>
+
+      <div class="form-group">
+        <label for="last_name">Last Name</label>
+        <input id="last_name" maxlength="80" name="last_name" type="text" placeholder="Enter your last name" />
+      </div>
+
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input id="company" maxlength="40" name="company" type="text" placeholder="Your company name" />
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input id="city" maxlength="40" name="city" type="text" placeholder="Your city" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" maxlength="80" name="email" type="email" placeholder="your@email.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input id="mobile" maxlength="40" name="mobile" type="tel" placeholder="Your phone number" />
+      </div>
+
+      <button type="submit" name="submit" class="submit-btn">Request Access</button>
+
+    </form>
   </div>
-  <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dd200000Dluwv" method="POST">
-
-<input type=hidden name="oid" value="00Dd200000Dluwv">
-<input type=hidden name="retURL" value="http://www.roicompass.com">
-
-<!--  ----------------------------------------------------------------------  -->
-<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-<!--  these lines if you wish to test in debug mode.                          -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail" value="thomasbentzen@mac.com">   -->
-<!--  ----------------------------------------------------------------------  -->
-
-<label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
-
-<label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-
-<label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" /><br>
-
-<label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
-
-<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-<label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
-
-<input type="submit" name="submit">
-
-</form>
 
   <div class="footer">
     © 2025 ROI COMPASS
