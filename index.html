@@ -272,10 +272,6 @@
 <!--  ----------------------------------------------------------------------  -->
 
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-</script>
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
@@ -283,7 +279,6 @@
 
 <form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DJW00000F6ptf" method="POST">
 
-<input type=hidden name='captcha_settings' value='{"keyname":"DCC_Capcha","fallback":"true","orgId":"00DJW00000F6ptf","ts":""}'>
 <input type=hidden name="oid" value="00DJW00000F6ptf">
 <input type=hidden name="retURL" value="http://google.com">
 
@@ -354,10 +349,10 @@ Line of Business:<select  id="00N2X0000097A9q" multiple="multiple" name="00N2X00
 <option value="Solar Panels">Solar Panels</option>
 </select><br>
 
-<div class="g-recaptcha" data-sitekey="6Lc2sUIkAAAAACYdKubIAHoMs-BCpm6BB4pDhJrX"></div><br>
 <input type="submit" name="submit">
 
 </form>
+
 
   </div>
 
@@ -366,5 +361,6 @@ Line of Business:<select  id="00N2X0000097A9q" multiple="multiple" name="00N2X00
   </div>
 </body>
 </html>
+
 
 
