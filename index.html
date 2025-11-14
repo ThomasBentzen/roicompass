@@ -265,6 +265,7 @@
       "Festina Lente" — Make Haste Slowly
       <div class="quote-author">— Caesar Augustus, First Roman Emperor</div>
     </div>
+    
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
 <!--  If necessary, please modify the charset parameter to specify the        -->
@@ -277,17 +278,16 @@
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 
-<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DWU00000M5jmD" method="POST">
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DJW00000F6ptf" method="POST">
 
-<input type=hidden name="oid" value="00DWU00000M5jmD">
+<input type=hidden name="oid" value="00DJW00000F6ptf">
 <input type=hidden name="retURL" value="http://google.com">
 
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
 <!--  these lines if you wish to test in debug mode.                          -->
 <!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="bentzen.thomas1@gmail.com">                                      -->
+<!--  <input type="hidden" name="debugEmail" value="tbe@dccenergi.dk">        -->
 <!--  ----------------------------------------------------------------------  -->
 
 <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" /><br>
@@ -300,7 +300,57 @@
 
 <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" /><br>
 
+<label for="lead_source">Lead Source</label><select  id="lead_source" name="lead_source"><option value="">--None--</option><option value="Email">Email</option>
+<option value="Partner Agreement">Partner Agreement</option>
+<option value="Phone">Phone</option>
+<option value="Web">Web</option>
+<option value="Trade Show">Trade Show</option>
+<option value="Other">Other</option>
+<option value="Opportunity Lost">Opportunity Lost</option>
+<option value="Opportunity Won">Opportunity Won</option>
+<option value="CO2 Tick on Opportunity">CO2 Tick on Opportunity</option>
+<option value="Shell B2B Application">Shell B2B Application</option>
+<option value="CRM Autoflow">CRM Autoflow</option>
+<option value="Outbound">Outbound</option>
+<option value="Ambition">Ambition</option>
+<option value="DLG">DLG</option>
+<option value="Customer Service">Customer Service</option>
+<option value="Shell Card Private">Shell Card Private</option>
+<option value="Technician">Technician</option>
+<option value="Varmepumpe.dk">Varmepumpe.dk</option>
+<option value="Facebook">Facebook</option>
+<option value="Kinnan">Kinnan</option>
+<option value="Brdr. Dahl">Brdr. Dahl</option>
+<option value="Bosch">Bosch</option>
+<option value="Commercial">Commercial</option>
+<option value="Commercial Agri">Commercial Agri</option>
+<option value="Mindmill">Mindmill</option>
+<option value="Partner">Partner</option>
+<option value="Cubs">Cubs</option>
+<option value="Signup">Signup</option>
+<option value="Tjenestetorvet">Tjenestetorvet</option>
+<option value="CM Relations">CM Relations</option>
+</select><br>
+
+Line of Business:<select  id="00N2X0000097A9q" multiple="multiple" name="00N2X0000097A9q" title="Line of Business"><option value="Aviation">Aviation</option>
+<option value="Wood Pellets">Wood Pellets</option>
+<option value="Cards CRT">Cards CRT</option>
+<option value="Cards Fleet">Cards Fleet</option>
+<option value="Coal">Coal</option>
+<option value="Electricity">Electricity</option>
+<option value="Fuels">Fuels</option>
+<option value="Lubes">Lubes</option>
+<option value="Natural Gas">Natural Gas</option>
+<option value="Retail">Retail</option>
+<option value="Heat Pumps">Heat Pumps</option>
+<option value="Mobility-EV">Mobility-EV</option>
+<option value="Power">Power</option>
+<option value="Solar Panels">Solar Panels</option>
+</select><br>
+
 <label for="mobile">Mobile</label><input  id="mobile" maxlength="40" name="mobile" size="20" type="text" /><br>
+
+<input type="hidden" name="recordType" value="0121v000000X4ZhAAK">   
 
 <input type="submit" name="submit">
 
@@ -315,7 +365,6 @@
   </div>
 </body>
 </html>
-
 
 
 
